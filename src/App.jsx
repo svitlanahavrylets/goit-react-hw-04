@@ -6,10 +6,10 @@ import ImageModal from "./components/ImageModal/ImageModal";
 import Loader from "./components/Loader/Loader";
 import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import SeachBar from "./components/SeachBar/SeachBar";
-import { requestAllImages } from "./services/api";
+// import { requestAllImages } from "./services/api";
 
 function App() {
-  requestAllImages();
+  // requestAllImages();
 
   // const [images, setImages] = useState(null)
 
