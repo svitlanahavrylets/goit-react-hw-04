@@ -1,27 +1,22 @@
-// const INITIAL_VALUES = {
-//   searchTerm: "",
-// };
-
 import { useState } from "react";
 import toast from "react-hot-toast";
 
-const SeachBar = ({ onSubmit }) => {
+const SearchBar = ({ onSubmit }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleChange = (event) => {
     const value = event.target.value;
     setSearchTerm(value);
-    console.log(value);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     if (searchTerm.trim() === "") {
-      console.log("Введіть текст для пошуку зображень");
       toast.error("Введіть текст для пошуку зображень");
+      return;
     }
     onSubmit(searchTerm);
-    setSearchTerm("");
+    // setSearchTerm("");
   };
   return (
     <div>
@@ -29,8 +24,8 @@ const SeachBar = ({ onSubmit }) => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
-            // autocomplete="off"
-            // autofocus
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
             value={searchTerm}
             onChange={handleChange}
@@ -42,4 +37,4 @@ const SeachBar = ({ onSubmit }) => {
   );
 };
 
-export default SeachBar;
+export default SearchBar;

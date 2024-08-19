@@ -1,18 +1,14 @@
 import ImageCard from "../ImageCard/ImageCard";
 
-const ImageGallery = () => {
+const ImageGallery = ({ images, openModal }) => {
   return (
-    //  Якщо зображення є &&
-    <div>
-      <ul>
-        {/* Набір елементів списку із зображеннями */}
-        <li>
-          <div>
-            <ImageCard />
-          </div>
+    <ul>
+      {images.map((image) => (
+        <li key={image.id} onClick={() => openModal(image)}>
+          <ImageCard image={image} />
         </li>
-      </ul>
-    </div>
+      ))}
+    </ul>
   );
 };
 

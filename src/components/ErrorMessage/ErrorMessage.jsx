@@ -1,14 +1,5 @@
-import toast, { Toaster } from "react-hot-toast";
-
-const notify = () => toast("Here is your toast.");
-
 const ErrorMessage = () => {
-  return (
-    <div>
-      <button onClick={notify}>Make me a toast</button>
-      <Toaster />
-    </div>
-  );
+  return <p>Whoops, something went wrong! Please try reloading this page!</p>;
 };
 
 export default ErrorMessage;

@@ -1,9 +1,12 @@
-
-
-const ImageCard = () => {
+const ImageCard = ({ image }) => {
   return (
-    <div>ImageCard</div>
-  )
-}
+    <div>
+      <img src={image.urls.small} alt={image.alt_description} />
+    </div>
+  );
+};
 
-export default ImageCard
+export default ImageCard;
+
+// id;
+// alt_description;
