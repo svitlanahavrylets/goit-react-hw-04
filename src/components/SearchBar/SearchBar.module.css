@@ -2,7 +2,6 @@
   width: 100%;
   padding: 12px 0;
   background-color: rgb(9, 111, 158);
-  margin-bottom: 24px;
 }
 .divSearchForm {
   display: block;
@@ -13,6 +12,10 @@
   padding: 12px;
   width: 272px;
 }
+.divSearchForm:hover,
+.divSearchForm:focus {
+  border: 1px solid rgb(0, 0, 0);
+}
 .input {
   padding: 8px 16px;
   border: none;
@@ -20,8 +23,8 @@
   outline: none;
   font-size: 16px;
   line-height: 150%;
-  letter-spacing: 0.04em;
   font-family: "Montserrat", sans-serif;
+  display: flex;
 }
 .searchBtn {
   position: absolute;

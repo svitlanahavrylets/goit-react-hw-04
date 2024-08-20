@@ -1,4 +1,5 @@
 import Modal from "react-modal";
+import css from "./ImageModal.module.css";
 
 const customStyles = {
   content: {
@@ -22,7 +23,9 @@ const ImageModal = ({ closeModal, modalIsOpen, modalImage }) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        {modalImage && <img src={modalImage.urls.regular} />}
+        {modalImage && (
+          <img className={css.modal} src={modalImage.urls.regular} />
+        )}
       </Modal>
     </div>
   );

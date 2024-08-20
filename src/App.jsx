@@ -28,7 +28,6 @@ function App() {
       try {
         setLoading(true);
         const data = await getImages(query, page);
-        console.log(data);
 
         if (data.total_pages === 0) {
           toast.error(
@@ -93,7 +92,7 @@ function App() {
       {images.length > 0 && (
         <LoadMoreBtn incrementPage={incrementPage} currentPage={currentPage} />
       )}
-      <Toaster />
+      <Toaster position="top-right" />
     </>
   );
 }
